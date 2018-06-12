@@ -45,6 +45,10 @@ class WeatherByCityNameService
     def get_weather_description
         @city_data["weather"][0]["description"].class
     end
+
+    def get_base
+        @city_data["base"]
+    end
 end
 
 # w = WeatherByCityNameService.new

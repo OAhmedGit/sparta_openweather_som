@@ -77,6 +77,10 @@ class WeatherByCityNameService
     def get_sea_level
         @city_data["main"]["sea_level"]
     end
+
+    def get_ground_level
+        @city_data["main"]["ground_level"]
+    end
 end
 
 # w = WeatherByCityNameService.new

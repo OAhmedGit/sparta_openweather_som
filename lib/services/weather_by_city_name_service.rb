@@ -13,6 +13,38 @@ class WeatherByCityNameService
     def get_coordinates_class
         @city_data["coord"].class
     end
+
+    def get_coordinates_count
+        @city_data["coord"].count
+    end
+
+    def get_long_class
+        @city_data["coord"]["lon"].class
+    end
+
+    def get_lat_class
+        @city_data["coord"]["lat"].class
+    end
+
+    def get_weather_class
+        @city_data["weather"].class
+    end
+
+    def get_weather_id
+        @city_data["weather"][0]["id"]
+    end
+
+    def get_weather_id_length
+        @city_data["weather"][0]["id"].to_s.length
+    end
+    
+    def get_weather_main
+        @city_data["weather"][0]["main"].class
+    end
+
+    def get_weather_description
+        @city_data["weather"][0]["description"].class
+    end
 end
 
 # w = WeatherByCityNameService.new

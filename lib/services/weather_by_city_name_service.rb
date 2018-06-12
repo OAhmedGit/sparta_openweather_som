@@ -145,6 +145,10 @@ class WeatherByCityNameService
     def get_sys_sunrise
         @city_data["sys"]["sunrise"]
     end
+
+    def get_sys_sunset
+        @city_data["sys"]["sunset"]
+    end
 end
 
 # w = WeatherByCityNameService.new

@@ -75,11 +75,11 @@ describe Weather do
     end 
 
     it "should return sea level as a Float" do
-        expect(@city_name_service.get_sea_level).to be(nil).or be_kind_of(Float)
+        expect(@city_name_service.get_sea_level).to be(nil).or be_kind_of(Float).or be_kind_of(Integer)
     end 
 
     it "should return ground level as a Float" do
-        expect(@city_name_service.get_ground_level).to be(nil).or be_kind_of(Float)
+        expect(@city_name_service.get_ground_level).to be(nil).or be_kind_of(Float).or be_kind_of(Integer)
     end 
 
     it "should return visibility as an Integer" do
@@ -100,6 +100,10 @@ describe Weather do
 
     it "should have wind degree as an Integer or Float" do
         expect(@city_name_service.get_degree).to be_kind_of(Integer).or be_kind_of(Float)
+    end
+
+    it "should have clouds as a Hash" do
+        expect(@city_name_service.get_clouds).to be_kind_of(Hash)
     end
 
     it "should return the city codes as an Array" do

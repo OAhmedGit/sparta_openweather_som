@@ -146,6 +146,10 @@ describe Weather do
         expect(@city_name_service.get_sys_sunset).to be_kind_of(Integer)
     end
 
+    it "should have return an Integer from the id key in main hash" do
+        expect(@city_name_service.get_id).to be_kind_of(Integer)
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

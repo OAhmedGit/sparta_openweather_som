@@ -94,6 +94,10 @@ describe Weather do
         expect(@city_name_service.get_wind_count).to be 2
     end
 
+    it "should have speed as a float" do
+        expect(@city_name_service.get_speed).to be_kind_of(Float)
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

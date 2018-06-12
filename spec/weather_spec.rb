@@ -14,11 +14,11 @@ describe Weather do
     end
 
     it "should return longitude as a float" do
-        expect(@city_name_service.get_long_class).to be_kind_of(Float)
+        expect(@city_name_service.get_long_class).to be_kind_of(Float).or be_kind_of(Integer)
     end
 
     it "should return latitude as a float" do
-        expect(@city_name_service.get_lat_class).to be_kind_of(Float)
+        expect(@city_name_service.get_lat_class).to be_kind_of(Float).or be_kind_of(Integer)
     end
 
     it "should return 2 as the number of values for coordinates" do
@@ -77,6 +77,14 @@ describe Weather do
     it "should return ground level as a Float" do
         expect(@city_name_service.get_ground_level).to be(nil).or be_kind_of(Float)
     end 
+
+    it "should return visibility as an Integer" do
+        expect(@city_name_service.get_visibility).to be_kind_of(Integer).or be(nil)
+    end 
+
+    it "should have wind as a Hash" do
+        expect(@city_name_service.get_wind).to be_kind_of(Hash)
+    end
 
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)

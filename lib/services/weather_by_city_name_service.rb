@@ -81,6 +81,14 @@ class WeatherByCityNameService
     def get_ground_level
         @city_data["main"]["ground_level"]
     end
+
+    def get_visibility
+        @city_data["visibility"]
+    end
+
+    def get_wind
+        @city_data["wind"]
+    end
 end
 
 # w = WeatherByCityNameService.new

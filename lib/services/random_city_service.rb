@@ -28,7 +28,7 @@ class RandomCityService
     end
 
     def pass_id_to_json
-        find_city_with_id(@random_id).class
+        find_city_with_id(@random_id)
     end
 end
 

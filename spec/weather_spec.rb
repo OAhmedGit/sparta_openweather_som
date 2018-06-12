@@ -118,6 +118,10 @@ describe Weather do
         expect(@city_name_service.get_sys).to be_kind_of(Hash)
     end
 
+    it "should have return a length of 6 from the sys Hash" do
+        expect(@city_name_service.get_sys_count).to eq 6
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

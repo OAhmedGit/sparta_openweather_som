@@ -66,6 +66,10 @@ describe Weather do
         expect(@city_name_service.get_min_temp).to be_kind_of(Float)
     end 
 
+    it "should return maximum temperature as a Float" do
+        expect(@city_name_service.get_max_temp).to be_kind_of(Float)
+    end 
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

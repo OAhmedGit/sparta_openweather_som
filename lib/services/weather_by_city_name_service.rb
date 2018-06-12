@@ -93,6 +93,10 @@ class WeatherByCityNameService
     def get_wind
         @city_data["wind"]
     end
+
+    def get_wind_count
+        @city_data["wind"].count
+    end
 end
 
 # w = WeatherByCityNameService.new

@@ -90,6 +90,10 @@ describe Weather do
         expect(@city_name_service.get_wind).to be_kind_of(Hash)
     end
 
+    it "should have wind as a Hash with 2 values" do
+        expect(@city_name_service.get_wind_count).to be 2
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

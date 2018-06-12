@@ -48,5 +48,9 @@ describe Weather do
     it "should return the city list as a String" do
         expect(@random_city_service.load_json).to be_kind_of(String)
     end
+
+    it "should return the city list as an Array" do
+        expect(@random_city_service.parse_json).to be_kind_of(Array)
+    end
     
 end

@@ -130,6 +130,10 @@ describe Weather do
         expect(@city_name_service.get_sys_id).to be_kind_of(Integer).or be nil
     end
 
+    it "should have return a Float from the message key" do
+        expect(@city_name_service.get_sys_message).to be_kind_of(Float).or be nil
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

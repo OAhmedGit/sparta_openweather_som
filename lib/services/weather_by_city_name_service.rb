@@ -133,6 +133,10 @@ class WeatherByCityNameService
     def get_sys_id
         p @city_data["sys"]["id"]
     end
+
+    def get_sys_message
+        p @city_data["sys"]["message"]
+    end
 end
 
 # w = WeatherByCityNameService.new

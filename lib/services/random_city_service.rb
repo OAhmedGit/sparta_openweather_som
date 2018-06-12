@@ -3,6 +3,8 @@ require 'json'
 
 class RandomCityService
 
+    # attr_accessor :city
+
     def load_yaml
         @city_code_array = YAML.load_file('city_id.yml')
     end
@@ -22,13 +24,15 @@ class RandomCityService
     def find_city_with_id (id)
         @city_hash.each do |city|
             if city["id"] == @city_code_array[id]
-                return city["name"]
+                @city = city["name"]
             end
         end
+
+        return @city
     end
 
     def pass_id_to_json
-        find_city_with_id(@random_id)
+        @city = find_city_with_id(@random_id)
     end
 end
 

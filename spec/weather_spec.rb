@@ -4,8 +4,9 @@ describe Weather do
 
     before(:all) do
         @random_city_service = Weather.new.random_city_service
+        # @random_city_service.pass_id_to_json
         @city_name_service = Weather.new.weather_by_city_name_service
-        @city_name_service.get_city_data("London")
+        @city_name_service.get_city_data("london")
     end
 
     it "should have a coordinates hash" do
@@ -52,5 +53,14 @@ describe Weather do
     it "should return the city list as an Array" do
         expect(@random_city_service.parse_json).to be_kind_of(Array)
     end
-    
+
+    it "Should return an integer between 0 and 22633" do
+        expect(@random_city_service.random_select).to be_kind_of(Integer)
+        expect(@random_city_service.random_select).to be_between(0, 22633)
+    end
+
+    it "Should return a city name as a string" do
+        expect(@random_city_service.pass_id_to_json).to be_kind_of(String)
+    end
+
 end

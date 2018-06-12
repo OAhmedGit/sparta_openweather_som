@@ -40,5 +40,9 @@ describe Weather do
     it "should return weather description as a string" do
         expect(@city_name_service.get_weather_description).to be String
     end 
+
+    it "should return the city codes as an Array" do
+        expect(@random_city_service.load_yaml).to be_kind_of(Array)
+    end
     
 end

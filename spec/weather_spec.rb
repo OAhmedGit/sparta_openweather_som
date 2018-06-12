@@ -4,9 +4,9 @@ describe Weather do
 
     before(:all) do
         @random_city_service = Weather.new.random_city_service
-        # @random_city_service.pass_id_to_json
+        p @random_city_service.pass_id_to_json
         @city_name_service = Weather.new.weather_by_city_name_service
-        @city_name_service.get_city_data("london")
+        @city_name_service.get_city_data(@random_city_service.pass_id_to_json)
     end
 
     it "should have a coordinates hash" do

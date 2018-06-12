@@ -3,8 +3,14 @@ require 'json'
 
 class RandomCityService
 
-    # attr_accessor :city
+    attr_accessor :city
 
+    def initialize
+        load_yaml
+        load_json
+        parse_json
+    end
+    
     def load_yaml
         @city_code_array = YAML.load_file('city_id.yml')
     end
@@ -32,6 +38,7 @@ class RandomCityService
     end
 
     def pass_id_to_json
+        random_select
         @city = find_city_with_id(@random_id)
     end
 end

@@ -91,8 +91,8 @@ describe Weather do
         expect(@city_name_service.get_wind).to be_kind_of(Hash)
     end
 
-    it "should have wind as a Hash with 2 values" do
-        expect(@city_name_service.get_wind_count).to be 2
+    it "should have wind as a Hash with 2 to 3 values" do
+        expect(@city_name_service.get_wind_count).to be_between(2,3)
     end
 
     it "should have wind speed as a Float or Integer" do
@@ -153,6 +153,10 @@ describe Weather do
 
     it "should return a string for name" do
         expect(@city_name_service.get_name).to be_kind_of(String)
+    end
+
+    it "should return string which matches the random city name" do
+        expect(@city_name_service.get_name).to eq @city_name
     end
 
     it "should return the city codes as an Array" do

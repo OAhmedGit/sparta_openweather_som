@@ -97,8 +97,13 @@ class WeatherByCityNameService
     def get_wind_count
         @city_data["wind"].count
     end
+
     def get_speed
         @city_data["wind"]["speed"]
+    end
+
+    def get_degree
+        @city_data["wind"]["deg"]
     end
 end
 

@@ -94,8 +94,12 @@ describe Weather do
         expect(@city_name_service.get_wind_count).to be 2
     end
 
-    it "should have speed as a float" do
-        expect(@city_name_service.get_speed).to be_kind_of(Float)
+    it "should have wind speed as a Float or Integer" do
+        expect(@city_name_service.get_speed).to be_kind_of(Float).or be_kind_of(Integer)
+    end
+
+    it "should have wind degree as an Integer or Float" do
+        expect(@city_name_service.get_degree).to be_kind_of(Integer).or be_kind_of(Float)
     end
 
     it "should return the city codes as an Array" do

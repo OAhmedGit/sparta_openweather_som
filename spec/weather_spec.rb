@@ -4,9 +4,10 @@ describe Weather do
 
     before(:all) do
         @random_city_service = Weather.new.random_city_service
-        @id = @random_city_service.pass_id_to_json
+        @city_name = @random_city_service.pass_id_to_json
         @city_name_service = Weather.new.weather_by_city_name_service
-        @city_name_service.get_city_data(@id)
+        @city_name_service.get_city_data(@city_name)
+        p @city_name
     end
 
     it "should have a coordinates hash" do
@@ -148,6 +149,10 @@ describe Weather do
 
     it "should have return an Integer from the id key in main hash" do
         expect(@city_name_service.get_id).to be_kind_of(Integer)
+    end
+
+    it "should return a string for name" do
+        expect(@city_name_service.get_name).to be_kind_of(String)
     end
 
     it "should return the city codes as an Array" do

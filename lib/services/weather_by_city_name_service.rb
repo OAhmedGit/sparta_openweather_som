@@ -153,6 +153,14 @@ class WeatherByCityNameService
     def get_id
         @city_data["id"]
     end
+
+    def check_id
+        @city_data["id"]
+    end
+
+    def get_name
+        @city_data["name"]
+    end
 end
 
 # w = WeatherByCityNameService.new

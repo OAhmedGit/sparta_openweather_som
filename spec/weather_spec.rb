@@ -50,6 +50,10 @@ describe Weather do
         expect(@city_name_service.get_main_class).to be_kind_of(Hash)
     end 
 
+    it "should return main with length between 5 and 7" do
+        expect(@city_name_service.get_main_count).to be_between(5,7)
+    end 
+
     it "should return temperature as a Float" do
         expect(@city_name_service.get_temp).to be_kind_of(Float)
     end 

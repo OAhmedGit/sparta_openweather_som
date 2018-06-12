@@ -54,6 +54,10 @@ class WeatherByCityNameService
         @city_data["main"]
     end
 
+    def get_main_count
+        @city_data["main"].count
+    end
+
     def get_temp
         @city_data["main"]["temp"]
     end

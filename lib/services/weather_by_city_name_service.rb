@@ -125,6 +125,10 @@ class WeatherByCityNameService
     def get_sys_count
         @city_data["sys"].count
     end
+
+    def get_type
+        @city_data["sys"]["type"]
+    end
 end
 
 # w = WeatherByCityNameService.new

@@ -119,7 +119,11 @@ describe Weather do
     end
 
     it "should have return a length of 6 from the sys Hash" do
-        expect(@city_name_service.get_sys_count).to eq 6
+        expect(@city_name_service.get_sys_count).to be_between(1,6)
+    end
+
+    it "should have return an integer from the type key" do
+        expect(@city_name_service.get_type).to be_kind_of(Integer).or be nil
     end
 
     it "should return the city codes as an Array" do

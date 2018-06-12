@@ -166,6 +166,3 @@ class WeatherByCityNameService
         @city_data["cod"]
     end
 end
-
-# w = WeatherByCityNameService.new
-# w.get_city_data('London')

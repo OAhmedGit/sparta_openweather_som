@@ -7,7 +7,6 @@ describe Weather do
         @city_name = @random_city_service.pass_id_to_json
         @city_name_service = Weather.new.weather_by_city_name_service
         @city_name_service.get_city_data(@city_name)
-        p @city_name
     end
 
     it "should have a coordinates hash" do

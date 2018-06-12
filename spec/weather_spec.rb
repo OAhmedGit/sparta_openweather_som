@@ -126,6 +126,10 @@ describe Weather do
         expect(@city_name_service.get_type).to be_kind_of(Integer).or be nil
     end
 
+    it "should have return an integer from the id key" do
+        expect(@city_name_service.get_sys_id).to be_kind_of(Integer).or be nil
+    end
+
     it "should return the city codes as an Array" do
         expect(@random_city_service.load_yaml).to be_kind_of(Array)
     end

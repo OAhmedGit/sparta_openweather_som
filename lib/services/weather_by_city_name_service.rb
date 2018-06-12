@@ -11,7 +11,7 @@ class WeatherByCityNameService
     end
 
     def get_coordinates_class
-        @city_data["coord"].class
+        @city_data["coord"]
     end
 
     def get_coordinates_count
@@ -19,15 +19,15 @@ class WeatherByCityNameService
     end
 
     def get_long_class
-        @city_data["coord"]["lon"].class
+        @city_data["coord"]["lon"]
     end
 
     def get_lat_class
-        @city_data["coord"]["lat"].class
+        @city_data["coord"]["lat"]
     end
 
     def get_weather_class
-        @city_data["weather"].class
+        @city_data["weather"]
     end
 
     def get_weather_id
@@ -39,11 +39,11 @@ class WeatherByCityNameService
     end
     
     def get_weather_main
-        @city_data["weather"][0]["main"].class
+        @city_data["weather"][0]["main"]
     end
 
     def get_weather_description
-        @city_data["weather"][0]["description"].class
+        @city_data["weather"][0]["description"]
     end
 
     def get_base
@@ -51,11 +51,23 @@ class WeatherByCityNameService
     end
 
     def get_main_class
-        @city_data["main"].class
+        @city_data["main"]
     end
 
     def get_temp
         @city_data["main"]["temp"]
+    end
+
+    def get_pressure
+        @city_data["main"]["pressure"]
+    end
+
+    def get_humidity
+        @city_data["main"]["humidity"]
+    end
+
+    def get_min_temp
+        @city_data["main"]["temp_min"]
     end
 end
 

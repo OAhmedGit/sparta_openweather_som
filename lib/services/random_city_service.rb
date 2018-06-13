@@ -10,7 +10,7 @@ class RandomCityService
         load_json
         parse_json
     end
-    
+
     def load_yaml
         @city_code_array = YAML.load_file('city_id.yml')
     end
